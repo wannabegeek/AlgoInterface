@@ -1,0 +1,72 @@
+doctype html
+html
+  head
+    title= title
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='')
+
+    // link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
+    // link(rel='stylesheet', href='/bootstrap/css/bootstrap-theme.min.css')
+    link(href='/stylesheets/sticky-footer-navbar.css', rel='stylesheet')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+  body
+    .navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+        .container-fluid
+            .navbar-header
+                button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+                a.navbar-brand(href='#') BlackBox
+            .navbar-collapse.collapse
+                ul.nav.navbar-nav.navbar-left
+                    li
+                        a(href='#') Dashboard
+                    li
+                        a(href='#') Settings
+                    li
+                        a(href='#') Profile
+                    li
+                        a(href='#') Help
+    .container-fluid
+        .row
+            .col-sm-3.col-md-2.sidebar
+                ul.nav.nav-sidebar
+                    li.active
+                        a(href='#') Overview
+                    li
+                        a(href='#') Reports
+                    li
+                        a(href='#') Analytics
+                    li
+                        a(href='#') Export
+                ul.nav.nav-sidebar
+                    li
+                        a(href='') Nav item
+                    li
+                        a(href='') Nav item again
+                    li
+                        a(href='') One more nav
+                    li
+                        a(href='') Another nav item
+                    li
+                        a(href='') More navigation
+                ul.nav.nav-sidebar
+                    li
+                        a(href='') Nav item again
+                    li
+                        a(href='') One more nav
+                    li
+                        a(href='') Another nav item
+    
+        .col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
+            // Begin page content
+            block content
+
+    script(type='text/javascript' src='/jquery/dist/jquery.min.js')
+    script(type='text/javascript' src='/bootstrap/dist/js/bootstrap.min.js')
