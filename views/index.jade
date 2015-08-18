@@ -3,16 +3,32 @@ extends layout
 block content
     // Begin page content
     .container
-      .page-header
-        h1 Sticky footer with fixed navbar
-      p.lead
-        | Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with 
-        code padding-top: 60px;
-        |  on the 
-        code body &gt; .container
-        | .
-      p
-        | Back to 
-        a(href='../sticky-footer') the default sticky footer
-        |  minus the navbar.
+        #performance_chart.chart
+        ul.nav.nav-tabs
+            li.active
+                a(href='') Positions
+            li
+                a(href='') Trades
 
+        table.table.table-striped
+            thead
+                tr
+                    th #id
+                    th Symbol
+                    th Quantity
+                    th P/L
+            tbody
+                tr
+                    td 0
+                    td EURUSD:CUR
+                    td 2
+                    td 1000
+                tr
+                    td 0
+                    td EURUSD:CUR
+                    td 4
+                    td 3200
+
+    script(type='text/javascript' src='/javascripts/highstock.js')
+    script(type='text/javascript' src='/javascripts/highcharts-more.js')
+    script(type='text/javascript' src='/javascripts/algorithm_data.js')
