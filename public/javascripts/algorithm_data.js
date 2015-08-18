@@ -1,5 +1,5 @@
 $(function() {
-//     display_data(null);
+     display_data(null);
 });
 
 function display_data(data) {

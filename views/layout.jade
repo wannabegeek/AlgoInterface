@@ -24,7 +24,9 @@ html
             .navbar-collapse.collapse
                 ul.nav.navbar-nav
                     li.active
-                        a(href='#') Dashboard
+                        a(href='#')
+                            span.glyphicon.glyphicon-flash
+                            | Algorithms
                     li
                         a(href='#') Settings
                     li
@@ -68,7 +70,8 @@ html
 
     script(type='text/javascript' src='/jquery/dist/jquery.min.js')
     script(type='text/javascript' src='/bootstrap/dist/js/bootstrap.min.js')
-    script(type='text/javascript' src='/javascripts/highstock.js')
-    script(type='text/javascript' src='/javascripts/highcharts-more.js')
+    script(type='text/javascript' src='/javascripts/highcharts/highstock.js')
+    script(type='text/javascript' src='/javascripts/highcharts/highcharts-more.js')
     script(type='text/javascript' src='/javascripts/algorithm_data.js')
+    script(type='text/javascript' src='/javascripts/chart-theme.js')
 

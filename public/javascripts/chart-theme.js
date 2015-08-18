@@ -1,36 +1,37 @@
 /**
  * Dark theme for Highcharts JS
- * @author Torstein Honsi
+ * @author Tom Fewster
  */
 
-// Load the fonts
-Highcharts.createElement('link', {
-   href: '//fonts.googleapis.com/css?family=Unica+One',
-   rel: 'stylesheet',
-   type: 'text/css'
-}, null, document.getElementsByTagName('head')[0]);
+var gray_darkest = '#222222';
+var gray_darker = '#292929';
+var gray_dark = '#333333';
+var gray = '#555555';
+var gray_light = '#999999';
+var gray_lighter = '#eeeeee';
+
+ // var performance_color = "#505053";
+var performance_color = "#FFF";
+
+var candle_up = 'green';
+var candle_down = 'red';
+
+var grid_color = gray_dark;
+var grid_minor_color = gray_darker;
 
 Highcharts.theme = {
-   colors: ["#2b908f", "#90ee7e", "#f45b5b", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee",
-      "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+   colors: ["#2b908f", "#90ee7e", "#f45b5b", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee", "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
    chart: {
-      backgroundColor: {
-         linearGradient: { x1: 0, y1: 0, x2: 1, y2: 1 },
-         stops: [
-            [0, '#2a2a2b'],
-            [1, '#3e3e40']
-         ]
-      },
+      backgroundColor: null,
       style: {
-         fontFamily: "'Unica One', sans-serif"
+         fontFamily: '"Trebuchet MS", Verdana, sans-serif"'
       },
-      plotBorderColor: '#606063'
+      plotBorderColor: grid_color
    },
    title: {
       style: {
          color: '#E0E0E3',
-         textTransform: 'uppercase',
-         fontSize: '20px'
+         fontSize: '15px'
       }
    },
    subtitle: {
@@ -40,15 +41,15 @@ Highcharts.theme = {
       }
    },
    xAxis: {
-      gridLineColor: '#707073',
+      gridLineColor: grid_color,
       labels: {
          style: {
-            color: '#E0E0E3'
+            color: gray
          }
       },
-      lineColor: '#707073',
-      minorGridLineColor: '#505053',
-      tickColor: '#707073',
+      lineColor: grid_color,
+      minorGridLineColor: grid_minor_color,
+      tickColor: grid_color,
       title: {
          style: {
             color: '#A0A0A3'
@@ -57,15 +58,15 @@ Highcharts.theme = {
       }
    },
    yAxis: {
-      gridLineColor: '#707073',
+      gridLineColor: grid_color,
       labels: {
          style: {
-            color: '#E0E0E3'
+            color: gray
          }
       },
-      lineColor: '#707073',
-      minorGridLineColor: '#505053',
-      tickColor: '#707073',
+      lineColor: grid_color,
+      minorGridLineColor: grid_minor_color,
+      tickColor: grid_color,
       tickWidth: 1,
       title: {
          style: {
@@ -82,17 +83,20 @@ Highcharts.theme = {
    plotOptions: {
       series: {
          dataLabels: {
-            color: '#B0B0B3'
+            color: gray
          },
          marker: {
             lineColor: '#333'
          }
       },
       boxplot: {
-         fillColor: '#505053'
+         fillColor: performance_color
       },
       candlestick: {
-         lineColor: 'white'
+         lineColor: candle_down,
+         upLineColor: candle_up,
+         color: candle_down,
+         upColor: candle_up
       },
       errorbar: {
          color: 'white'
@@ -163,10 +167,10 @@ Highcharts.theme = {
             }
          }
       },
-      inputBoxBorderColor: '#505053',
+      inputBoxBorderColor: grid_color,
       inputStyle: {
          backgroundColor: '#333',
-         color: 'silver'
+         color: 'white'
       },
       labelStyle: {
          color: 'silver'
@@ -185,7 +189,7 @@ Highcharts.theme = {
          lineColor: '#A6C7ED'
       },
       xAxis: {
-         gridLineColor: '#505053'
+         gridLineColor: grid_color
       }
    },
 
