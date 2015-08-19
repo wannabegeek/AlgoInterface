@@ -8,7 +8,6 @@ html
     meta(name='description', content='')
     meta(name='author', content='')
 
-    link(href='/stylesheets/sticky-footer-navbar.css', rel='stylesheet')
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/javascripts/jquery-ui-1.11.4/jquery-ui.min.css')
 
@@ -77,7 +76,8 @@ html
     
         .col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
             // Begin page content
-            block content
+            .content
+                block content
 
     script(type='text/javascript' src='/jquery/jquery.min.js')
     script(type='text/javascript' src='/javascripts/jquery-ui-1.11.4/jquery-ui.min.js')
