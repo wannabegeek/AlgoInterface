@@ -1944,7 +1944,7 @@ function display_data(data) {
                 title: {
                     text: 'OHLC'
                 },
-                height: '60%',
+                height: '80%',
                 lineWidth: 2
             }, {
                 labels: {
@@ -1954,8 +1954,8 @@ function display_data(data) {
                 title: {
                     text: 'Volume'
                 },
-                top: '65%',
-                height: '35%',
+                top: '82%',
+                height: '18%',
                 offset: 0,
                 lineWidth: 2
             }],

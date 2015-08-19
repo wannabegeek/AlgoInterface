@@ -13,14 +13,16 @@ var gray_lighter = '#eeeeee';
  // var performance_color = "#505053";
 var performance_color = "#FFF";
 
-var candle_up = 'green';
-var candle_down = 'red';
+var candle_up = '#57AC84';
+var candle_up_border = '#035937';
+var candle_down = '#E73B33';
+var candle_down_border = '#630A0A';
 
 var grid_color = gray_dark;
 var grid_minor_color = gray_darker;
 
 Highcharts.theme = {
-   colors: ["#2b908f", "#90ee7e", "#f45b5b", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee", "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+   colors: [gray, "#90ee7e", "#f45b5b", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee", "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
    chart: {
       backgroundColor: null,
       style: {
@@ -93,8 +95,8 @@ Highcharts.theme = {
          fillColor: performance_color
       },
       candlestick: {
-         lineColor: candle_down,
-         upLineColor: candle_up,
+         lineColor: candle_down_border,
+         upLineColor: candle_up_border,
          color: candle_down,
          upColor: candle_up
       },
@@ -146,9 +148,9 @@ Highcharts.theme = {
    rangeSelector: {
       buttonTheme: {
          fill: gray_darkest,
-         stroke: '#000000',
+         stroke: gray_dark,
          style: {
-            color: gray_light
+            color: gray
          },
          states: {
             hover: {
@@ -182,11 +184,11 @@ Highcharts.theme = {
          backgroundColor: '#666',
          borderColor: '#AAA'
       },
-      outlineColor: '#CCC',
+      outlineColor: gray_dark,
       maskFill: 'rgba(255,255,255,0.1)',
       series: {
          color: '#7798BF',
-         lineColor: '#A6C7ED'
+         lineColor: gray
       },
       xAxis: {
          gridLineColor: grid_color
@@ -194,14 +196,14 @@ Highcharts.theme = {
    },
 
    scrollbar: {
-      barBackgroundColor: '#808083',
-      barBorderColor: '#808083',
-      buttonArrowColor: '#CCC',
+      barBackgroundColor: gray,
+      barBorderColor: gray,
+      buttonArrowColor: gray_light,
       buttonBackgroundColor: '#606063',
       buttonBorderColor: '#606063',
       rifleColor: '#FFF',
-      trackBackgroundColor: '#404043',
-      trackBorderColor: '#404043'
+      trackBackgroundColor: gray_darker,
+      trackBorderColor: gray
    },
 
    // special colors for some of the
