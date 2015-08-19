@@ -22,8 +22,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/jquery', express.static(path.join(__dirname, '/node_modules/jquery/')));
-app.use('/bootstrap', express.static(path.join(__dirname, '/node_modules/bootstrap/')));
+app.use('/jquery', express.static(path.join(__dirname, '/node_modules/jquery/dist')));
+app.use('/jquery-ui', express.static(path.join(__dirname, '/node_modules/jquery-ui')));
+app.use('/bootstrap', express.static(path.join(__dirname, '/node_modules/bootstrap/dist')));
 
 app.use('/', routes);
 app.use('/users', users);

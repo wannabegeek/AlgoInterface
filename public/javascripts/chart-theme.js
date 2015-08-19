@@ -145,21 +145,21 @@ Highcharts.theme = {
    // scroll charts
    rangeSelector: {
       buttonTheme: {
-         fill: '#505053',
+         fill: gray_darkest,
          stroke: '#000000',
          style: {
-            color: '#CCC'
+            color: gray_light
          },
          states: {
             hover: {
-               fill: '#707073',
+               fill: gray_dark,
                stroke: '#000000',
                style: {
-                  color: 'white'
+                  color: gray_light
                }
             },
             select: {
-               fill: '#000003',
+               fill: gray_dark,
                stroke: '#000000',
                style: {
                   color: 'white'

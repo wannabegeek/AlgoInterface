@@ -3,28 +3,36 @@ extends layout
 block content
     // Begin page content
     .container
-        #performance_chart.chart
-        ul.nav.nav-tabs
-            li.active
-                a(href='') Positions
-            li
-                a(href='') Trades
+        #split_pane
+            #top_pane
+                #performance_chart.chart
+            #divider
+            #bottom_pane
+                #position_table
+                    ul.nav.nav-tabs
+                        li.active
+                            a(href='') Positions
+                        li
+                            a(href='') Trades
 
-        table.table.table-striped
-            thead
-                tr
-                    th #id
-                    th Symbol
-                    th Quantity
-                    th P/L
-            tbody
-                tr
-                    td 0
-                    td EURUSD:CUR
-                    td 2
-                    td 1000
-                tr
-                    td 0
-                    td EURUSD:CUR
-                    td 4
-                    td 3200
+                    - var positions = [{"id":"0", "timestamp":"19/08/2015 09:14:56", "symbol":"EURUSD:CUR", "quantity":"2", "pl":1000.00}, {"id":"1", "timestamp":"19/08/2015 12:05:01", "symbol":"EURUSD:CUR", "quantity":"6", "pl":-1200.00}, {"id":"2", "timestamp":"19/08/2015 14:15:00", "symbol":"EURUSD:CUR", "quantity":"1", "pl":234.00}, {"id":"3", "timestamp":"18/08/2015 10:45:34", "symbol":"EURUSD:CUR", "quantity":"4", "pl":-23.00}];
+
+                    table.table.table-hover.positions
+                        thead
+                            tr
+                                th #id
+                                th Entry Time
+                                th Symbol
+                                th Quantity
+                                th P/L
+                        tbody
+                            for position in positions
+                                tr
+                                    td= position.id
+                                    td= position.timestamp
+                                    td= position.symbol
+                                    td= position.quantity
+                                    if position.pl > 0.0
+                                        td.profit= position.pl
+                                    else
+                                        td.loss= position.pl

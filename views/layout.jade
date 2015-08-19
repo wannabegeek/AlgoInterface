@@ -10,6 +10,7 @@ html
 
     link(href='/stylesheets/sticky-footer-navbar.css', rel='stylesheet')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/javascripts/jquery-ui-1.11.4/jquery-ui.min.css')
 
   body
     .navbar.navbar.navbar-fixed-top(role='navigation')
@@ -26,13 +27,23 @@ html
                     li.active
                         a(href='#')
                             span.glyphicon.glyphicon-flash
-                            | Algorithms
+                            | &nbsp;Algorithms
                     li
-                        a(href='#') Settings
+                        a(href='#')
+                            span.glyphicon.glyphicon-time
+                            | &nbsp;Scheduled Tasks
                     li
-                        a(href='#') Profile
+                        a(href='#')
+                            span.glyphicon.glyphicon-book
+                            | &nbsp;Static Data
                     li
-                        a(href='#') Help
+                        a(href='#')
+                            span.glyphicon.glyphicon-calendar
+                            | &nbsp;Calendar
+                    li
+                        a(href='#')
+                            span.glyphicon.glyphicon-stats
+                            | &nbsp;Performance
     .container-fluid
         .row
             .col-sm-3.col-md-2.sidebar
@@ -68,10 +79,12 @@ html
             // Begin page content
             block content
 
-    script(type='text/javascript' src='/jquery/dist/jquery.min.js')
-    script(type='text/javascript' src='/bootstrap/dist/js/bootstrap.min.js')
+    script(type='text/javascript' src='/jquery/jquery.min.js')
+    script(type='text/javascript' src='/javascripts/jquery-ui-1.11.4/jquery-ui.min.js')
+    script(type='text/javascript' src='/bootstrap/js/bootstrap.min.js')
     script(type='text/javascript' src='/javascripts/highcharts/highstock.js')
     script(type='text/javascript' src='/javascripts/highcharts/highcharts-more.js')
     script(type='text/javascript' src='/javascripts/algorithm_data.js')
     script(type='text/javascript' src='/javascripts/chart-theme.js')
+    script(type='text/javascript' src='/javascripts/utils.js')
 
