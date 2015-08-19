@@ -18,7 +18,8 @@ $(function() {
               $(this).height(currentHeight);
               
               // set the content panel width
-              $("#split_pane #bottom_pane").height(containerHeight - currentHeight - padding);            
+              $("#split_pane #bottom_pane").height(containerHeight - currentHeight - padding); 
+              hs_chart.reflow()
           }
     });
 });

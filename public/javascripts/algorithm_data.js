@@ -1923,7 +1923,10 @@ function display_data(data) {
 
 
         // create the chart
-        $('#performance_chart').highcharts('StockChart', {
+        hs_chart = new Highcharts.StockChart({
+            chart: {
+                renderTo: 'performance_chart'
+            },
 
             rangeSelector: {
                 selected: 1
