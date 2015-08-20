@@ -91,14 +91,18 @@ Highcharts.theme = {
             lineColor: '#333'
          }
       },
-      boxplot: {
-         fillColor: performance_color
+      column: {
+         fillColor: performance_color,
+         lineColor: performance_color
       },
       candlestick: {
          lineColor: candle_down_border,
          upLineColor: candle_up_border,
          color: candle_down,
          upColor: candle_up
+      },
+      line: {
+         lineColor: gray
       },
       errorbar: {
          color: 'white'

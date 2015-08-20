@@ -27,7 +27,9 @@ $(function() {
       var new_height = $(window).height() - $("#split_pane").offset().top - 12;
       $("#split_pane").height(new_height);
       $(resize).height(new_height - padding - $("#split_pane #bottom_pane").height);
-      hs_chart.reflow();
+      if (typeof hs_chart !== 'undefined') {
+        hs_chart.reflow();
+      }
     };
 
     $(window).resize(setSplitPaneSize);

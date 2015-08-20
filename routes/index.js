@@ -1,13 +1,24 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'BlackBox' });
+var mysql = require('mysql');
+var connection = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'root'
 });
 
-router.get('/test', function (req, res) {
-  res.send('Hello World!');
+connection.query('USE blackbox');
+
+/* GET home page. */
+router.get('/', function(req, res, next) {
+    res.render('index', { title: 'BlackBox' });
+});
+
+router.get('/data', function(req, res) {
+    connection.query('SELECT UNIX_TIMESTAMP(timestamp) * 1000 AS timestamp, open AS o, high AS h, low AS l, close AS c FROM prices WHERE symbol="VOD:LDN" AND priceType="CLOSING"', function(err, rows, fields) {
+        if (err) throw err;
+        res.jsonp(rows);
+    });
 });
 
 module.exports = router;
